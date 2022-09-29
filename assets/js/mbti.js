@@ -353,7 +353,7 @@
         next();
       }
 
-      //위의 버튼 클릭 시 점수 계산
+      //위의 버튼 클릭 시 점수계산
       $("#up").click(function () {
         var type = $("#type").val();
         var preValue = $("#" + type).val();

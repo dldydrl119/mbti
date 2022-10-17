@@ -198,7 +198,7 @@
           img: "/assets/images/INTP.png",
           chemistryimg: "/assets/images/ESFJ.png",
           notchemistryimg: "/assets/images/INTJ.png",
-          clickexplain: "잘맞아요",
+          clickexplain: "잘맞아.",
           notclickexplain: "잘 안맞아요",
         },
         ESTP: {

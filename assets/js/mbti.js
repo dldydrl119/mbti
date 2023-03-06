@@ -351,6 +351,29 @@
         $("#notclickexplain").hide();
         $("#title").html(q[num]["title"]);
         next();
+        // 뒤로가기 버튼 클릭 이벤트 처리
+        $("#back").click(function () {
+             num--;
+              if (num < 1) {
+         num = 1;
+        }
+       $("#title").html(q[num]["title"]);
+       $("#type").val(q[num]["type"]);
+       $("#up").html(q[num]["up"]);
+       $("#down").html(q[num]["down"]);
+      
+       // 선택한 답변 취소 처리
+       var type = $("#type").val();
+        var preValue = $("#" + type).val();
+       $("#" + type).val(parseInt(preValue) - 1);
+      
+       // 진행상황 바 갱신
+       $(".progress-bar").attr(
+         "style",
+        "width: calc(100 / 12 * " + (num - 1) + "%)"
+    );
+  });
+            
       }
 
       //위의 버튼 클릭 시 점수계산
